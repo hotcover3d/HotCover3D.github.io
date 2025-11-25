@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Proyectos | HotCover3D</title>
+    
+    <link rel="stylesheet" type="text/css" href="../Css/Menu.css">
+    <link rel="stylesheet" type="text/css" href="../Css/Contacto.css"> <link rel="icon" type="image/png" href="../img/icon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">         
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__list-ops"><a href="../index.html"> Inicio</a> </li>  
+                <li class="nav__list-ops"><a> Catalogo </a>
+                    <ul class="nav__Sublist">
+                        <li class="nav__Sublist-ops"><a href="iPhone.html">iPhone</a> </li>
+                        <li class="nav__Sublist-ops"><a href="#" onclick="alert('Próximamente Samsung')">Samsung</a></li>
+                        <li class="nav__Sublist-ops"><a href="#" onclick="alert('Próximamente Xiaomi')">Xiaomi</a></li>  
+                    </ul>   
+                </li>
+                <li class="nav__list-ops"><a href="Personalizacion.html"> Personalización</a> </li>  
+                <li class="nav__list-ops"><a href="#" style="color: #00A9FF;"> Contáctanos</a> </li>  
+            </ul>
+        </nav>          
+    </header>
+
+    <section class="hero-contact">
+        <h1>¿Tienes un proyecto en mente?</h1>
+        <p>No solo hacemos fundas. Si se puede imprimir en 3D, <b>lo hacemos realidad.</b></p>
+    </section>
+
+    <section class="contact-container">
+        
+        <div class="contact-info">
+            <h2>Hablemos</h2>
+            <p>Estamos listos para ayudarte con prototipos, figuras, piezas mecánicas o dudas sobre tu pedido.</p>
+            
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h4>Correo Electrónico</h4>
+                    <p>contacto@hotcover3d.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4>Ubicación</h4>
+                    <p>Envíos a todo México.</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-cubes"></i>
+                <div>
+                    <h4>Servicios Extra</h4>
+                    <ul>
+                        <li>Impresión de Figuras/Coleccionables.</li>
+                        <li>Prototipado rápido (PLA/PETG/ABS).</li>
+                        <li>Repuestos de piezas plásticas.</li>
+                        <li>Venta al mayoreo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+            <form class="general-form" onsubmit="enviarContacto(event)">
+                <h3>Formulario General</h3>
+                
+                <div class="input-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Tipo de Solicitud</label>
+                    <select id="tipo" required>
+                        <option value="" disabled selected>¿Qué necesitas?</option>
+                        <option value="Impresión de Pieza/Figura">Cotizar Pieza o Figura 3D</option>
+                        <option value="Mayoreo/Distribución">Mayoreo o Negocios</option>
+                        <option value="Duda sobre Pedido">Duda sobre mi pedido</option>
+                        <option value="Otro">Otro asunto</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Mensaje / Detalles</label>
+                    <textarea id="mensaje" rows="5" placeholder="Cuéntanos: ¿Tienes el archivo STL? ¿De qué tamaño lo necesitas? ¿Color?..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-send">
+                    Iniciar Chat <i class="fab fa-whatsapp"></i>
+                </button>
+            </form>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HotCover3D. Innovación en impresión.</p>
+    </footer>
+
+    <script>
+        function enviarContacto(e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const tipo = document.getElementById('tipo').value;
+            const mensajeTexto = document.getElementById('mensaje').value;
+            const telefono = "523525284597"; 
+
+            // Formato del mensaje para WhatsApp
+            const msgFinal = `Hola HotCover3D, te contacto desde la web.%0A%0A` +
+                             `👤 *Nombre:* ${nombre}%0A` +
+                             `📌 *Asunto:* ${tipo}%0A` +
+                             `📝 *Mensaje:* ${mensajeTexto}`;
+
+            const url = `https://wa.me/${telefono}?text=${msgFinal}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
