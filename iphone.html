@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo iPhone | HotCover3D</title>
+    
+    <link rel="stylesheet" type="text/css" href="../Css/Menu.css">
+    <link rel="stylesheet" type="text/css" href="../Css/iPhone.css">
+    <link rel="icon" type="image/png" href="../img/icon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">         
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__list-ops"><a href="index.html"> Inicio</a> </li>  
+                <li class="nav__list-ops"><a> Catalogo </a>
+                    <ul class="nav__Sublist">
+                        <li class="nav__Sublist-ops"><a href="#">iPhone</a> </li>
+                        <li class="nav__Sublist-ops"><a href="#" onclick="alert('Próximamente Samsung')">Samsung</a></li>
+                        <li class="nav__Sublist-ops"><a href="#" onclick="alert('Próximamente Xiaomi')">Xiaomi</a></li>  
+                    </ul>   
+                </li>
+                <li class="nav__list-ops"><a href="index.html#personalizar"> Personalización</a> </li>  
+                <li class="nav__list-ops"><a href="index.html#contacto"> Contáctanos</a> </li>  
+            </ul>
+        </nav>          
+    </header>
+
+    <section class="hero">
+        <h1>Colección iPhone</h1>
+        <p>Protección premium para Standard, Plus, Pro y Pro Max.</p>
+    </section>
+
+    <div class="model-nav">
+        <a href="#iphone16">iPhone 16 Series</a>
+        <a href="#iphone15">iPhone 15 Series</a>
+        <a href="#iphone14">iPhone 14 Series</a>
+        <a href="#iphone13">iPhone 13 Series</a>
+        <a href="#iphone12">iPhone 12 Series</a>
+    </div>
+
+    <section id="iphone16" class="model-section">
+        <div class="model-header">
+            <h2>Serie iPhone 16</h2>
+            <p>Compatible con: <b>16 • 16 Plus • 16 Pro • 16 Pro Max</b></p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card reveal">
+                <div class="tag">NUEVO</div>
+                <div class="product-image-container">
+                    <img src="../img/Iphone16.png" alt="Funda iPhone 16 Pro Max">
+                </div>
+                <div class="product-info">
+                    <h3>Negro Mate</h3>
+                    <p>Protección total para cámaras del <b> iPhone 16</b>.</p>
+                    <div class="price-row">
+                        <span class="price">$150</span>
+                        <button class="btn-sm" onclick="comprar('Negro Mate - iPhone 16', '$450')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card reveal">
+                <div class="product-image-container">
+                    <img src="../img/Iphone16hex.stl.png" alt="Funda iPhone 16 Plus">
+                </div>
+                <div class="product-info">
+                    <h3>Hex Case</h3>
+                    <p>Diseño hexagonal para el <b>iPhone 16</b>.</p>
+                    <div class="price-row">
+                        <span class="price">$100</span>
+                        <button class="btn-sm" onclick="comprar('Hex Case - iPhone 16', '$420')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iphone15" class="model-section">
+        <div class="model-header">
+            <h2>Serie iPhone 15</h2>
+            <p>Compatible con: <b>15 • 15 Plus • 15 Pro • 15 Pro Max</b></p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card reveal">
+                <div class="tag oferta">-10%</div>
+                <div class="product-image-container">
+                    <img src="../img/iPhone 15 Pro case - Case.stl.png" alt="Funda iPhone 15 Pro">
+                </div>
+                <div class="product-info">
+                    <h3>Dynamic Style</h3>
+                    <p>Ligera y resistente. Ideal para <b>15 Pro</b>.</p>
+                    <div class="price-row">
+                        <span class="price">$380</span>
+                        <button class="btn-sm" onclick="comprar('Dynamic Style - iPhone 15', '$380')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+             <div class="product-card reveal">
+                <div class="product-image-container">
+                    <img src="../img/Telefono.png" alt="Funda iPhone 15">
+                </div>
+                <div class="product-info">
+                    <h3>Carbon Fiber 3D</h3>
+                    <p>Textura fibra de carbono. Disponible para todos.</p>
+                    <div class="price-row">
+                        <span class="price">$390</span>
+                        <button class="btn-sm" onclick="comprar('Carbon Fiber - iPhone 15', '$390')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iphone14" class="model-section">
+        <div class="model-header">
+            <h2>Serie iPhone 14</h2>
+            <p>Compatible con: <b>14 • 14 Plus • 14 Pro • 14 Pro Max</b></p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card reveal">
+                <div class="product-image-container">
+                    <img src="../img/Telefono.png" alt="Funda iPhone 14 Pro Max">
+                </div>
+                <div class="product-info">
+                    <h3>Classic Grip</h3>
+                    <p>Agarre extra para el tamaño del <b>14 Pro Max</b>.</p>
+                    <div class="price-row">
+                        <span class="price">$350</span>
+                        <button class="btn-sm" onclick="comprar('Classic Grip - iPhone 14', '$350')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iphone13" class="model-section">
+        <div class="model-header">
+            <h2>Serie iPhone 13</h2>
+            <p>Compatible con: <b>13 • 13 Mini • 13 Pro • 13 Pro Max</b></p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card reveal">
+                <div class="product-image-container">
+                    <img src="../img/Telefono.png" alt="Funda iPhone 13 Pro">
+                </div>
+                <div class="product-info">
+                    <h3>Camera Shield</h3>
+                    <p>Borde elevado para lentes del <b>13 Pro / Pro Max</b>.</p>
+                    <div class="price-row">
+                        <span class="price">$300</span>
+                        <button class="btn-sm" onclick="comprar('Camera Shield - iPhone 13', '$300')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iphone12" class="model-section">
+        <div class="model-header">
+            <h2>Serie iPhone 12</h2>
+            <p>Compatible con: <b>12 • 12 Mini • 12 Pro • 12 Pro Max</b></p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card reveal">
+                <div class="tag oferta">OFERTA</div>
+                <div class="product-image-container">
+                    <img src="../img/Telefono.png" alt="Funda iPhone 12 Pro">
+                </div>
+                <div class="product-info">
+                    <h3>Square Edge</h3>
+                    <p>Diseño que realza los bordes planos del <b>12 Pro</b>.</p>
+                    <div class="price-row">
+                        <span class="price">$250</span>
+                        <button class="btn-sm" onclick="comprar('Square Edge - iPhone 12', '$250')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HotCover3D. Todos los derechos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/523525284597" class="whatsapp-btn" target="_blank">
+       <img src="../img/icon-whatsapp.webp" alt="WhatsApp">
+    </a>
+
+    <button id="scrollTopBtn" title="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 1. FUNCIÓN DE COMPRA WHATSAPP
+        function comprar(producto, precio) {
+            const telefono = "523525284597"; 
+            const mensaje = `Hola HotCover3D, me interesa comprar: ${producto} con precio de ${precio}. ¿Tienen disponibilidad?`;
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        // 2. BOTÓN VOLVER ARRIBA
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        const scrollFunction = () => {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+
+        // 3. ANIMACIONES Y MENÚ ACTIVO
+        const sections = document.querySelectorAll('.model-section');
+        const navLinks = document.querySelectorAll('.model-nav a');
+        
+        window.addEventListener('scroll', () => {
+            scrollFunction(); // Checar botón arriba
+            
+            // Animación Reveal
+            const reveals = document.querySelectorAll('.reveal');
+            for (let i = 0; i < reveals.length; i++) {
+                let windowheight = window.innerHeight;
+                let revealtop = reveals[i].getBoundingClientRect().top;
+                let revealpoint = 50;
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+            }
+
+            // Menú Activo
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= (sectionTop - 180)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
