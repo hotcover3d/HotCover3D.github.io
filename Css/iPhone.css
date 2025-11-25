@@ -1,0 +1,173 @@
+/* =========================================
+   CONFIGURACIÓN BÁSICA
+   ========================================= */
+body {
+    background-color: #111317;
+    color: #EBF0F5;
+    font-family: 'Roboto', sans-serif;
+    margin: 0; padding: 0;
+}
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+a, button { text-decoration: none; color: inherit; }
+
+/* =========================================
+   HERO PEQUEÑO
+   ========================================= */
+.hero {
+    min-height: 30vh;
+    background-color: #111317;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; color: #fff; }
+.hero p { color: #aaa; font-size: 1.1rem; }
+
+/* =========================================
+   STICKY NAV (MENÚ MODELOS)
+   ========================================= */
+.model-nav {
+    background-color: #1C1F26;
+    padding: 15px 0;
+    position: sticky; top: 0; z-index: 900;
+    border-bottom: 1px solid #333;
+    display: flex; justify-content: center; gap: 10px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.model-nav a {
+    color: #EBF0F5; padding: 8px 16px;
+    border-radius: 20px; font-size: 0.9rem; font-weight: bold;
+    border: 1px solid transparent; transition: 0.3s;
+}
+.model-nav a:hover, .model-nav a.active {
+    background-color: #00A9FF; color: #111317;
+    box-shadow: 0 0 10px rgba(0, 169, 255, 0.4);
+}
+
+/* =========================================
+   SECCIONES
+   ========================================= */
+.model-section {
+    padding-top: 80px; padding-bottom: 60px;
+    border-bottom: 1px solid #222;
+}
+.model-header { text-align: center; margin-bottom: 40px; }
+.model-header h2 {
+    font-size: 2.2rem; color: #00A9FF;
+    display: inline-block; border-bottom: 3px solid #00A9FF;
+    padding-bottom: 5px;
+}
+.model-header p { color: #888; margin-top: 8px; font-size: 0.95rem; }
+
+/* =========================================
+   GRID DE PRODUCTOS (Estilo Ancho)
+   ========================================= */
+.product-grid {
+    display: flex; /* Flexbox para centrar tarjetas anchas */
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 30px;
+    max-width: 1200px; margin: 0 auto; padding: 0 20px;
+}
+
+/* =========================================
+   TARJETA DE PRODUCTO
+   ========================================= */
+.product-card {
+    background: #1C1F26;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 1px solid #333;
+    position: relative;
+    display: flex; flex-direction: column;
+    
+    /* Configuración para tarjeta ancha y centrada */
+    width: 100%;
+    max-width: 650px; 
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #00A9FF;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Etiquetas */
+.tag {
+    position: absolute; top: 15px; right: 15px;
+    background-color: #00A9FF; color: #111317;
+    padding: 5px 12px; border-radius: 15px;
+    font-size: 0.75rem; font-weight: 800; z-index: 2;
+}
+.tag.oferta { background-color: #ff4757; color: white; }
+
+/* Imagen */
+.product-image-container {
+    height: 300px;
+    background-color: #16181d;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; padding: 20px;
+}
+.product-image-container img {
+    width: auto; max-width: 90%; max-height: 90%;
+    object-fit: contain; /* Imagen completa siempre */
+    transition: transform 0.5s ease;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+}
+.product-card:hover img { transform: scale(1.05); }
+
+/* Info */
+.product-info { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
+.product-info h3 { margin-bottom: 10px; color: #fff; font-size: 1.4rem; }
+.product-info p { color: #aaa; font-size: 1rem; margin-bottom: 25px; }
+
+/* Precio y Botón */
+.price-row {
+    margin-top: auto;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid #333; padding-top: 20px;
+}
+.price { font-size: 1.6rem; font-weight: bold; color: #EBF0F5; }
+
+.btn-sm {
+    padding: 10px 30px;
+    border: 2px solid #00A9FF; color: #00A9FF;
+    background: transparent; border-radius: 30px;
+    font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 1rem;
+}
+.btn-sm:hover { background-color: #00A9FF; color: #111317; }
+
+/* =========================================
+   ANIMACIONES & EXTRAS
+   ========================================= */
+/* Animación de entrada (Reveal) */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Botón Volver Arriba */
+#scrollTopBtn {
+    display: none; position: fixed; bottom: 120px; right: 25px;
+    z-index: 99; font-size: 18px; border: none; outline: none;
+    background-color: #333; color: white; cursor: pointer;
+    padding: 12px 18px; border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s;
+}
+#scrollTopBtn:hover { background-color: #00A9FF; transform: translateY(-3px); }
+
+/* Footer y WhatsApp */
+footer {
+    background-color: #000; padding: 20px; text-align: center;
+    border-top: 1px solid #333; margin-top: 50px;
+}
+.whatsapp-btn {
+    position: fixed; bottom: 40px; right: 20px;
+    width: 60px; height: 60px;
+    background-color: #157638; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 1000; transition: transform 0.3s;
+}
+.whatsapp-btn:hover { transform: scale(1.1); }
+.whatsapp-btn img { width: 50px; height: 50px; }

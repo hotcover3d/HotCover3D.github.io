@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    size: auto;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; /* Usamos el peso 'light' para elegancia */
+    color: #EBF0F5;
+    background-color: #111317;
+    
+}
+body ,div ,  ul, li, a ,header, nav {
+    margin: 0;
+    padding: 0; 
+    
+}
+li, a {
+    color: inherit;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.header{
+    background-color: rgb(37, 42, 52);
+    display: flex;  
+    justify-content: center; 
+    max-width: 800px; 
+    margin: auto;
+    background-color: #111317; /* Superficie Acero */
+    border-bottom: 2px solid #00A9FF; /* Acento Neón */
+}
+.nav {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    width: auto;
+    
+}
+.nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    min-width: 100px;
+    
+
+    }
+    .nav__list :hover {
+    background-color: #00A9FF; 
+    color: #111317;
+}
+.nav__list-ops{
+    min-width: 100px;
+    display: block;
+    margin: auto;
+    min-width: 100px;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;   
+    padding: 20px;
+    
+}
+
+ /*-----------------------------------------------------
+    |a partir de aqui empieza el codigo para el submenu |
+    ------------------------------------------------------- */
+/* --- ESTILOS PARA LOS ITEMS (Todos los 'li') --- */
+.nav__list-ops,
+.nav__Sublist-ops {
+    /* LA REGLA DE ORO: 
+       El 'li' padre sirve de ANCLA para el 'ul' hijo. */
+    position: relative; 
+      background-color: #111317; /* Su; /* Superficie Acero */
+}
+
+/* --- OCULTAR TODOS LOS SUBMENÚS (Nivel 2 y 3) POR DEFECTO --- */
+.nav__Sublist,
+.nav__Sublist-ops-sublist {
+    display: none; /* Ocultos por defecto */
+    position: absolute;
+    background-color: #1C2028; 
+    border: 2px solid #00A9FF; 
+    min-width: 170px; 
+    z-index: 10;      
+}
+
+.nav__list-ops:hover > .nav__Sublist {
+    display: block; 
+    top: 100%; 
+    left: 0;
+      background-color: #111317; /* Su; /* Superficie Acero */
+}
+
+.nav__Sublist-ops:hover > .nav__Sublist-ops-sublist {
+    display: block; 
+    top: 0;   
+    left: 100%; 
+      background-color: #111317; /* Su; /* Superficie Acero */
+}
+
+.nav__Sublist-ops a,
+.nav__Sublist-ops-sublist-ops a {
+    display: block; 
+    padding: 12px 15px;
+    color: #EBF0F5;
+    text-align: left; 
+}
+
+.nav__Sublist-ops a:hover,
+.nav__Sublist-ops-sublist-ops a:hover {
+    background-color: #00A9FF; 
+    color: #111317; 
+}
+
