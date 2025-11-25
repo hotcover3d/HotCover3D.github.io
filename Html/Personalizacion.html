@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaliza tu Funda | HotCover3D</title>
+    
+    <link rel="stylesheet" type="text/css" href="../Css/Menu.css">
+    <link rel="stylesheet" type="text/css" href="../Css/Personalizacion.css">
+    <link rel="icon" type="image/png" href="../img/icon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">         
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__list-ops"><a href="../index.html"> Inicio</a> </li>  
+                <li class="nav__list-ops"><a> Catalogo </a>
+                    <ul class="nav__Sublist">
+                        <li class="nav__Sublist-ops"><a href="iPhone.html">iPhone</a> </li>
+                        <li class="nav__Sublist-ops"><a href="#" onclick="alert('Próximamente Samsung')">Samsung</a></li>
+                        <li class="nav__Sublist-ops"><a href="#" onclick="alert('Próximamente Xiaomi')">Xiaomi</a></li>  
+                    </ul>   
+                </li>
+                <li class="nav__list-ops"><a href="#" style="color: #00A9FF;"> Personalización</a> </li>  
+                <li class="nav__list-ops"><a href="../index.html#contacto"> Contáctanos</a> </li>  
+            </ul>
+        </nav>          
+    </header>
+
+    <section class="hero-custom">
+        <div class="hero-content">
+            <h1>Tu imaginación, <span style="color: #00A9FF;">nuestra impresión.</span></h1>
+            <p>Convierte tu idea, logo o personaje favorito en una funda 3D única en el mundo.</p>
+        </div>
+    </section>
+
+    <section class="custom-container">
+        
+        <div class="info-column">
+            <h2>¿Cómo funciona?</h2>
+            <div class="step">
+                <div class="step-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="step-text">
+                    <h3>1. Ten tu idea lista</h3>
+                    <p>Puede ser una imagen, un logo o un texto en relieve.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-icon"><i class="fas fa-file-alt"></i></div>
+                <div class="step-text">
+                    <h3>2. Llena el formulario</h3>
+                    <p>Dinos tu modelo y detalles. Te llevaremos a WhatsApp.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-icon"><i class="fas fa-image"></i></div>
+                <div class="step-text">
+                    <h3>3. Envía tu imagen</h3>
+                    <p>En el chat de WhatsApp, adjunta la foto de referencia.</p>
+                </div>
+            </div>
+
+            <div class="ideas-box">
+                <h3>Ideas populares:</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Tu nombre en estilo Cyberpunk.</li>
+                    <li><i class="fas fa-check"></i> Logo de tu empresa en relieve.</li>
+                    <li><i class="fas fa-check"></i> Patrones geométricos únicos.</li>
+                    <li><i class="fas fa-check"></i> Litofanía (Foto que se ve a contraluz).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="form-column">
+            <div class="custom-form">
+                <h2>Cotiza tu Diseño</h2>
+                <p>Completa los datos y te atenderemos personalmente en WhatsApp.</p>
+                
+                <form id="whatsappForm" onsubmit="enviarWhatsApp(event)">
+                    <div class="input-group">
+                        <label>Tu Nombre</label>
+                        <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Modelo de Celular</label>
+                        <select id="modelo" required>
+                            <option value="" disabled selected>Selecciona tu modelo...</option>
+                            <option value="iPhone 16 / Pro / Max">iPhone 16 Series</option>
+                            <option value="iPhone 15 / Pro / Max">iPhone 15 Series</option>
+                            <option value="iPhone 14 / Pro / Max">iPhone 14 Series</option>
+                            <option value="iPhone 13 / Pro / Max">iPhone 13 Series</option>
+                            <option value="iPhone 12 / Pro / Max">iPhone 12 Series</option>
+                            <option value="Otro Modelo">Otro (Especificar en chat)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Describe tu idea</label>
+                        <textarea id="idea" rows="4" placeholder="Ej. Quiero una funda negra con mi nombre 'Alex' en letras neón rojas en la parte de abajo..." required></textarea>
+                    </div>
+
+                    <div class="note-box">
+                        <i class="fas fa-info-circle"></i> 
+                        <small>Al dar clic, se abrirá WhatsApp. No olvides <b>adjuntar tu imagen</b> ahí.</small>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Enviar a WhatsApp <i class="fab fa-whatsapp"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="inspiration-gallery">
+        <h2>Trabajos Recientes</h2>
+        <div class="gallery-grid">
+            <img src="../img/Telefono.png" alt="Custom 1">
+            <img src="../img/funda-negra.png" alt="Custom 2">
+            <img src="../img/Telefono.png" alt="Custom 3">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HotCover3D. Expertos en personalización.</p>
+    </footer>
+
+    <script>
+        function enviarWhatsApp(e) {
+            e.preventDefault(); // Evita que se recargue la página
+
+            // 1. Obtener valores
+            const nombre = document.getElementById('nombre').value;
+            const modelo = document.getElementById('modelo').value;
+            const idea = document.getElementById('idea').value;
+            const telefonoEmpresa = "523525284597"; // TU NÚMERO
+
+            // 2. Crear mensaje
+            const mensaje = `Hola HotCover3D, quiero cotizar un diseño personalizado.%0A%0A` +
+                            `👤 *Nombre:* ${nombre}%0A` +
+                            `📱 *Modelo:* ${modelo}%0A` +
+                            `🎨 *Idea:* ${idea}%0A%0A` +
+                            `Voy a adjuntar mi imagen de referencia a continuación.`;
+
+            // 3. Abrir WhatsApp
+            const url = `https://wa.me/${telefonoEmpresa}?text=${mensaje}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
